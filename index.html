@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Wialon</title>
+    <link rel="stylesheet" href="css/style.css?ver=112423">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://nst1.gismeteo.ru/assets/flat-ui/legacy/css/informer.min.css">
+    <link rel="stylesheet" href="css/style_screen.css?ver=1124230947">
+</head>
+
+<body>
+
+
+    <!-- load map -->
+
+    <div class="wrapper">
+        <div id="map"></div>
+        <div class="map__legend">
+            <div class="map__red">
+                <input type="checkbox" id="arh1" class="check check01" checked><label for="arh1">1 категория</label>
+            </div>
+            <div class="map__purple">
+                <input type="checkbox" id="arh2" class="check check02" checked><label for="arh2">2 категория</label>
+            </div>
+            <div class="map__blue">
+                <input type="checkbox" id="arh3" class="check check03" checked><label for="arh3">2* категория</label>
+            </div>
+            <div class="map__green">
+                <input type="checkbox" id="arh4" class="check check04" checked><label for="arh4">3 категория</label>
+            </div>
+            <div class="map__black">
+                <input type="checkbox" id="arh5" class="check check05" checked><label for="arh5">тротуары</label>
+            </div>
+            <button id="clearAll" class="button-map">
+                Очистить все
+            </button>
+            <button id="showAll" class="button-map">
+                Показать все
+            </button>
+        </div>
+        <div class="map__logo">
+            <img src="image/logo_without.svg" alt="">
+        </div>
+        <div class="map__weather">
+            <div id="gsInformerID-v82L8N8Wo5OTy6" class="gsInformer" style="width:235px;height:225px">
+                <div class="gsIContent">
+                    <div id="cityLink">
+                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/" target="_blank"
+                            title="Погода в Архангельске">
+                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/gisloader.svg" width="24" height="24"
+                                alt="Погода в Архангельске">
+                        </a>
+                    </div>
+                    <div class="gsLinks">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="leftCol">
+                                        <a href="https://www.gismeteo.ru/" target="_blank" title="Погода">
+                                            <img alt="Погода"
+                                                src="https://nst1.gismeteo.ru/assets/flat-ui/img/logo-mini2.png"
+                                                align="middle" border="0" width="11" height="16" />
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/gismeteo.svg"
+                                                border="0" align="middle" style="left: 5px; top:1px">
+                                        </a>
+                                    </div>
+                                    <div class="rightCol">
+                                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/2-weeks/"
+                                            target="_blank" title="Погода в Архангельске на 2 недели">
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/forecast-2weeks.ru.svg"
+                                                border="0" align="middle" style="top:auto"
+                                                alt="Погода в Архангельске на 2 недели">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map__weather-min">
+            <div id="gsInformerID-1PV2R7em67NFnr" class="gsInformer" style="width:125px;height:99px">
+                <div class="gsIContent">
+                    <div id="cityLink">
+                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/" target="_blank"
+                            title="Погода в Архангельске">
+                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/gisloader.svg" width="24" height="24"
+                                alt="Погода в Архангельске">
+                        </a>
+                    </div>
+                    <div class="gsLinks">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="leftCol">
+                                        <a href="https://www.gismeteo.ru/" target="_blank" title="Погода">
+                                            <img alt="Погода"
+                                                src="https://nst1.gismeteo.ru/assets/flat-ui/img/logo-mini2.png"
+                                                align="middle" border="0" width="11" height="16" />
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/gismeteo.svg"
+                                                border="0" align="middle" style="left: 5px; top:1px">
+                                        </a>
+                                    </div>
+                                    <div class="rightCol">
+                                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/2-weeks/"
+                                            target="_blank" title="Погода в Архангельске на 2 недели">
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/forecast-2weeks.ru.svg"
+                                                border="0" align="middle" style="top:auto"
+                                                alt="Погода в Архангельске на 2 недели">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map__text">
+            <p>Онлайн-мониторинг техники не работает по техническим причинам</p>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-omnivore.min.js"></script>
+    <script src="js/scipt-geo.js"></script>
+    <script async src="https://www.gismeteo.ru/api/informer/getinformer/?hash=v82L8N8Wo5OTy6"></script>
+    <!-- Архангельск -->
+    <script async src="https://www.gismeteo.ru/api/informer/getinformer/?hash=1PV2R7em67NFnr"></script>
+    <!-- Архангельск мин -->
+    <script src="js/only_road.js"></script>
+</body>
+
+</html>
