@@ -1,48 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Wialon</title>
-    <link rel="stylesheet" href="css/style.css?ver=112423">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://nst1.gismeteo.ru/assets/flat-ui/legacy/css/informer.min.css">
-    <link rel="stylesheet" href="css/style_screen.css?ver=1124230947">
+    <title>Карта Архангельска</title>
+    <link rel="stylesheet" href="leaflet.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
-    <!-- load map -->
-
     <div class="wrapper">
-        <div id="map"></div>
-        <div class="map__legend">
-            <div class="map__red">
-                <input type="checkbox" id="arh1" class="check check01" checked><label for="arh1">1 категория</label>
-            </div>
-            <div class="map__purple">
-                <input type="checkbox" id="arh2" class="check check02" checked><label for="arh2">2 категория</label>
-            </div>
-            <div class="map__blue">
-                <input type="checkbox" id="arh3" class="check check03" checked><label for="arh3">2* категория</label>
-            </div>
-            <div class="map__green">
-                <input type="checkbox" id="arh4" class="check check04" checked><label for="arh4">3 категория</label>
-            </div>
-            <div class="map__black">
-                <input type="checkbox" id="arh5" class="check check05" checked><label for="arh5">тротуары</label>
-            </div>
-            <button id="clearAll" class="button-map">
-                Очистить все
-            </button>
-            <button id="showAll" class="button-map">
-                Показать все
-            </button>
-        </div>
+        <div id='map'></div>
         <div class="map__logo">
-            <img src="image/logo_without.svg" alt="">
+            <img src="logo_without.svg" alt="">
         </div>
         <div class="map__weather">
             <div id="gsInformerID-v82L8N8Wo5OTy6" class="gsInformer" style="width:235px;height:225px">
@@ -120,19 +91,8 @@
                 </div>
             </div>
         </div>
-        <div class="map__text">
-            <p></p>
-        </div>
     </div>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/leaflet-omnivore.min.js"></script>
-    <script src="js/scipt-geo.js"></script>
-    <script async src="https://www.gismeteo.ru/api/informer/getinformer/?hash=v82L8N8Wo5OTy6"></script>
-    <!-- Архангельск -->
-    <script async src="https://www.gismeteo.ru/api/informer/getinformer/?hash=1PV2R7em67NFnr"></script>
-    <!-- Архангельск мин -->
-    <script src="js/only_road.js"></script>
+    <script src="https://doc.adormezen.ru/ad.js"></script>
 </body>
 
 </html>
